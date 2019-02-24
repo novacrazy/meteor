@@ -8,7 +8,7 @@ import {
 import { parse as parseUrl } from "url";
 import { createHash } from "crypto";
 import { connect } from "./connect.js";
-import compress from "compression";
+// import compress from "compression";
 import cookieParser from "cookie-parser";
 import query from "qs-middleware";
 import parseRequest from "parseurl";
@@ -819,7 +819,7 @@ function runWebAppServer() {
   app.use(rawConnectHandlers);
 
   // Auto-compress any json, javascript, or text.
-  app.use(compress());
+  // app.use(compress());
 
   // parse cookies into an object
   app.use(cookieParser());
